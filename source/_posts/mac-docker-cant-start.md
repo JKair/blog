@@ -19,3 +19,25 @@ categories: 后端
 最后我只得@其他哥们看看解决的那个人是怎么说的，然后那个大胡子兄弟跟我说，具体不大记得，就大概是重装了一下。
 
 我尝试了重装，但是并不起作用，后面我自己推测大概是卸载不干净导致，于是我就上网上搜了一些教程，按照这篇[卸载](https://therealmarv.com/how-to-fully-uninstall-the-offical-docker-os-x-installation/)文章操作之后重装，Docker 终于可以重新启动了。
+
+删除具体命令如下：
+```
+docker-machine rm -f $(docker-machine ls -q)
+boot2docker stop
+boot2docker delete
+sudo rm -rf /Applications/boot2docker
+sudo rm -rf /Applications/Docker
+sudo rm -f /usr/local/bin/docker
+sudo rm -f /usr/local/bin/boot2docker
+sudo rm -f /usr/local/bin/docker-machine
+sudo rm -r /usr/local/bin/docker-machine-driver*
+sudo rm -f /usr/local/bin/docker-compose
+sudo pkgutil --forget io.docker.pkg.docker
+sudo pkgutil --forget io.docker.pkg.dockercompose
+sudo pkgutil --forget io.docker.pkg.dockermachine
+sudo pkgutil --forget io.boot2dockeriso.pkg.boot2dockeriso
+sudo rm -rf /usr/local/share/boot2docker
+rm -rf ~/.boot2docker
+rm ~/.ssh/id_boot2docker*
+rm -rf ~/.docker
+```
