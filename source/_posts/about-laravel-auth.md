@@ -158,4 +158,4 @@ categories: 后端
 
 后记，这里必须提一个问题就是，使用attempt登录，laravel是直接在调用了getAuthPassword，里面返回的是$this->password，如果你数据库里面的用户表，密码存储的字段并不是password，而是其他，例如mypassword，则在UserModel改写`getAuthPassword`成`return $this->mypassword`。
 
-添加多一种方法，如果你不想修改源码，但是也想替换的话，那么，你可以通过容器去解决这个问题，laravel的设计确实很巧妙。详细你可以参考我的[另外一篇文章](http://www.jianshu.com/p/8032745fd794)。
+添加多一种方法，如果你不想修改源码，但是也想替换的话，那么，你可以通过容器去解决这个问题，laravel的设计确实很巧妙。详细你可以参考我的[另外一篇文章](https://kair.xyz/2016/12/14/laravel-use-md5/)。

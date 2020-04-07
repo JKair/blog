@@ -193,7 +193,7 @@ class RiskUserProvider extends EloquentUserProvider
         });
 ```
 我们可以在AuthServiceProvider的boot方式注入就好了。
-根据[b35f1cb8a1fd](http://www.jianshu.com/users/b35f1cb8a1fd)这个朋友的反馈，5.2是使用`Auth::provider`方法，详细我自己并没有尝试过，不过这位朋友成功了，谢谢这位朋友的反馈。
+有人说5.2是使用`Auth::provider`方法，详细我自己并没有尝试过，应该是差不多，反正原理就在上面了。
 
 最后最后，我们在config/auth.php里面，替换驱动成`riak`。这样问题就解决了。
 

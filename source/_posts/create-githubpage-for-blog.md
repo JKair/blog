@@ -1,5 +1,5 @@
 ---
-title: 用githubpage搭建自己的博客并绑定自己的域名
+title: 用githubpage搭建自己的博客（一）
 date: 2020-04-07 14:16:53
 tags: [githubpage]
 categories: 后端
@@ -30,7 +30,7 @@ categories: 后端
       ```
       deploy:
       type: git
-      repo: 你的仓库地址
+      repo: 你的仓库地址，记得是ssh地址，这样不用老是输入密码
       #branch: 这个可填也不填，如果不指定的话，hexo 将会自己创建一个master 分支上传
       ```
     - 打开命令行，在 blog 的目录下输入 `hexo clean && hexo d`，等hexo 编译完就部署上去了了
